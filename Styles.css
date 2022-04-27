@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: rgb(235, 235, 235);
+  }
+  h1 {
+    margin-bottom: 1em;
+  }
+  
+  .logo {
+    height: 150px;
+  }
+  
+  .search-bar {
+    width: 500px;
+    background-color: #ccc;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .search-bar button, .search-bar input {
+    font-size: 20px;
+  }
+  
+  .movies {
+    margin: auto;
+    width: 600px;
+    margin-top: 10px;
+  }
+  
+  .movie-box {
+    background-color: rgb(215, 208, 208);
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    text-align:left;
+  }
+  
+  .movie-box .details .title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .movie-box .details .overview {
+    padding-top: 4px;
+    
+  }
+  img{
+      width: auto;
+      height: 400px; 
+      float: left;
+      margin-right: 10px;
+     }
+
+  .cat {
+      height:400px
+     }
+.circulo {
+	width: 1.4rem;
+	height: 1.4rem;
+	border-radius: 50%;
+	background: rgb(248, 54, 19);
+	display: flex;
+  border: solid black 2px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  margin:0px auto;
+  padding:3%;
+  float: right;
+}
+
+.circulo > h2 {
+	font-family: sans-serif;
+	color: white;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
