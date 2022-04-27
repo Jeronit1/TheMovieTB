@@ -28,8 +28,9 @@ function submitForm() {
       console.error(err)
     })
 }
+//function actualizar(renderMovie){
+//html.innerHTML = ("");
 
-// Render a movie in the page
 function renderMovie(title, overview, poster_path, release_date, vote_average) {
   const moviesDiv = document.getElementById("movies-list");
   const html = `
@@ -38,7 +39,7 @@ function renderMovie(title, overview, poster_path, release_date, vote_average) {
         <div class="cat"><img src = https://www.themoviedb.org/t/p/w600_and_h900_bestv2${poster_path}>
         <div><div class="circulo"><h2>${vote_average}</h2></div>
         <div class="title">${title}</div>
-        <div class="overview">${overview}</div> 
+        <div class="overview"><p class="descripcion">${overview}</p></div> 
         <div class="overview"><b>Fecha de lanzamiento: ${release_date}<b></div>
         </div>
         </div>
