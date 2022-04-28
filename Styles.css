@@ -80,3 +80,17 @@ body {
 .descripcion{
     font-size: 14px;
 }
+div.Contenedor{
+float: left;
+width: 200px;
+height: 200px;
+  background-color: tomato;
+ text-align: center;
+ align-items: center;
+ display: block;
+ justify-content: center;
+ margin: auto;
+}
+button.Centrado{
+    width: 110px; /* Para que no se rompa en dos líneas, y lo translade tal cual. */
+}
