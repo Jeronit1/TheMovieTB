@@ -6,19 +6,21 @@
 </head>
 <body>
   <div>
-  <h1>Buscar Peliculas</h1> 
+  <h1>Buscar Peliculas</h1>
+  <div class="Contenedor">
+    <button class="Centrado" onclick="submitFormPopular()">Populares</button>
+    <br><br>
+    <button class="Centrado" onclick="submitFormNewMovies()">Ver estrenos</button>
+    </div> 
   <div>
-      <script>
-          renderMovie.innerHTML = ("");
-      </script>
   <form class="search-bar" action="#">
     <input type="text" id="query" value="" placeholder="Ingrese el nombre" />
     <button onclick="submitForm()">Buscar</button>
-  </form>
+</form>
 </div>
-  <div  class="movies" id="movies">
-    <div id="movies-list"></div>
-  </div>
+        <div  class="movies" id="movies">
+        <div id="movies-list"></div>
+        </div>
   </div>
 
 
