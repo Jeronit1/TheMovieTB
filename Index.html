@@ -1,16 +1,19 @@
-<!DOCTYPE html>
+<html>
 <head>
   <title>Movies</title>
   <link rel="stylesheet" href="Styles.css">
-  <script src="main.js"></script>
+ 
 </head>
 <body>
   <div>
   <h1>Buscar Peliculas</h1>
   <div class="Contenedor">
+    <p>Ver las peliculas:</p>
     <button class="Centrado" onclick="submitFormPopular()">Populares</button>
     <br><br>
-    <button class="Centrado" onclick="submitFormNewMovies()">Ver estrenos</button>
+    <button class="Centrado1" onclick="submitFormPremieres()">Estrenos</button>
+    <br><br>
+    <button class="Centrado2" onclick="submitFormComingSoon()">Proximamente</button>
     </div> 
   <div>
   <form class="search-bar" action="#">
@@ -19,9 +22,10 @@
 </form>
 </div>
         <div  class="movies" id="movies">
-        <div id="movies-list"></div>
+        <div id="list"></div>
         </div>
   </div>
-
-
+  <script src="main.js"></script>
 </body>
+</html>
+
