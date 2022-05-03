@@ -1,7 +1,8 @@
 const API_ENDPOINT = `https://api.themoviedb.org/3/search/movie?api_key=3ccee47bd8e29ef810cf39b3fe5a1810`
-const API_ORDERPOPULAR= `https://api.themoviedb.org/3/discover/movie?api_key=3ccee47bd8e29ef810cf39b3fe5a1810&language=es-AR&region=AR&sort_by=vote_average.&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`
+const API_ORDERPOPULAR= `https://api.themoviedb.org/3/discover/movie?api_key=3ccee47bd8e29ef810cf39b3fe5a1810&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`
 const API_POPULAR = `https://api.themoviedb.org/3/movie/top_rated?api_key=3ccee47bd8e29ef810cf39b3fe5a1810&language=es-AR&page=1`
 const API_PREMIERES = `https://api.themoviedb.org/3/movie/now_playing?api_key=3ccee47bd8e29ef810cf39b3fe5a1810&language=es-AR&page=1`
+const API_RANKING =`https://api.themoviedb.org/3/discover/movie?api_key=3ccee47bd8e29ef810cf39b3fe5a1810&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`
 const API_COMING_SOON = `https://api.themoviedb.org/3/movie/upcoming?api_key=3ccee47bd8e29ef810cf39b3fe5a1810&language=es-AR&page=1&region=AR`
 //buscar pelicula
 let moviesDiv = document.getElementById("list");
@@ -10,10 +11,15 @@ function searchMovies(query) {
     .then(response => response.json())
 }
 //Filtro de busqueda popular
-function searchMoviesMorePopular() {
-  return fetch(API_ORDERPOPULAR)
+function searchMoviesYear(year) {
+  return fetch(API_ORDERPOPULAR + '&primary_release_year=' + year)
     .then(response => response.json())
 }
+//busca segun el ranking puesto por el usuario
+function searchMoviesRanking(vote, page) {
+    return fetch(API_ORDERPOPULAR + '&vote_average.gte=' + vote + '&page=' + page )
+      .then(response => response.json())
+  }
 //buscar peliculas populares
 function searchMoviesPopular() {
     return fetch(API_POPULAR)
@@ -44,6 +50,7 @@ function submitForm() {
       if (data && data.results) {
         // Iterate list of movies and render each of them
         data.results.forEach((movie) => {
+            //Movie.posterpath = imagen de la pelicula
           renderMovie(movie.original_title, movie.overview, movie.poster_path, movie.release_date, movie.vote_average)
         }) 
       } 
@@ -52,15 +59,15 @@ function submitForm() {
       console.error(err)
     })
 }
-//Promesa de busqueda mas popular:
-function SubmitPopular() {
+//Promesa de busqueda por año:
+function SubmitYear() {
   while (moviesDiv.firstChild){
     moviesDiv.removeChild(moviesDiv.firstChild);
   };
 
-
+  const year = document.getElementById("year").value;
   // Execute API request
-  searchMoviesMorePopular()
+  searchMoviesYear(year)
     .then((data) => {
       // Process results from API
       if (data && data.results) {
@@ -74,6 +81,29 @@ function SubmitPopular() {
       console.error(err)
     })
 }
+//promesa de Ranking
+function SubmitRanking() {
+    while (moviesDiv.firstChild){
+      moviesDiv.removeChild(moviesDiv.firstChild);
+    };
+  
+    const vote = document.getElementById("vote").value;
+    const page = document.getElementById("page").value;
+    // Execute API request
+    searchMoviesRanking(vote, page)
+      .then((data) => {
+        // Process results from API
+        if (data && data.results) {
+          // Iterate list of movies and render each of them
+          data.results.forEach((movie) => {
+            renderMovie(movie.original_title, movie.overview, movie.poster_path, movie.release_date, movie.vote_average)
+          }) 
+        } 
+      })
+      .catch((err) => {
+        console.error(err)
+      })
+  }
 //Promesa de peliculas mas populares:
 function submitFormPopular() {
   while (moviesDiv.firstChild){
@@ -144,4 +174,6 @@ function renderMovie(title, overview, poster_path, release_date, vote_average) {
   `;
   moviesDiv.insertAdjacentHTML("afterbegin", html);
 }   
+let Page = getElementById(BotonPage);
+Page.addEventListner('click', SubmitRanking)
 
