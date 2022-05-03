@@ -130,3 +130,37 @@ button.Centrado1{
     top: -60px;
     margin: 0 auto;
   }
+  button.Centrado3{
+    width: 80px; /* Para que no se rompa en dos líneas, y lo translade tal cual. */
+    height: 30px;
+    position: relative;
+    padding: -27px auto 80px 100px;
+  }
+  div.Contenedor2{
+    float: right;
+    width: 200px;
+    height: 270px;
+    background-color: #ccc;
+    display: block;
+    position: absolute;
+    right: 90px; top: 190px;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+    color: #ffffff;  
+    font-weight: 400; 
+    background: #889ccf; 
+    padding: 20px; 
+    border-radius: 35px 0px 35px 0px; 
+    -moz-border-radius: 35px 0px 35px 0px; 
+    -webkit-border-radius: 35px 0px 35px 0px; 
+    border: 2px solid #5878ca;
+}
+b{
+    padding-right: 170px;
+}
+.input1{
+    width: 99px;
+    height: 30px;
+    position: relative;
+    right: 10px; top: 3px;
+    margin-bottom: 10px;
+}
