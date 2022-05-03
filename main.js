@@ -2,7 +2,6 @@ const API_ENDPOINT = `https://api.themoviedb.org/3/search/movie?api_key=3ccee47b
 const API_POPULAR = `https://api.themoviedb.org/3/movie/top_rated?api_key=3ccee47bd8e29ef810cf39b3fe5a1810&language=es-AR&page=1`
 const API_PREMIERES = `https://api.themoviedb.org/3/movie/now_playing?api_key=3ccee47bd8e29ef810cf39b3fe5a1810&language=es-AR&page=1`
 const API_COMING_SOON = `https://api.themoviedb.org/3/movie/upcoming?api_key=3ccee47bd8e29ef810cf39b3fe5a1810&language=es-AR&page=1&region=AR`
-let puntuacion = [];
 //buscar pelicula
 let moviesDiv = document.getElementById("list");
 function searchMovies(query) {
@@ -100,10 +99,7 @@ function submitFormPremieres() {
     }
 
 function renderMovie(title, overview, poster_path, release_date, vote_average) {
-  const moviesDiv = document.getElementById("list");
-  puntuacion.push({
-    title, overview, poster_path, release_date, vote_average
-  }); 
+  const moviesDiv = document.getElementById("list"); 
   const html = `
     <div class="movie-box">
       <div class="details">
@@ -119,57 +115,4 @@ function renderMovie(title, overview, poster_path, release_date, vote_average) {
     <br>
   `;
   moviesDiv.insertAdjacentHTML("afterbegin", html);
-    puntuacion.sort((a, b)=>{
-if (a.vote_average == b.vote_average){
-  return 0;
-}
-if (a.vote_average < b.vote_average){
-  return -1;
-}
-if (a.vote_average > b.vote_average){
-  return 1;
-}
-});
-}   
-
-function OrdenPopular(title, overview, poster_path, release_date, vote_average){
-console.log(puntuacion);
-const moviesDiv = document.getElementById("list"); 
-  const html = `
-    <div class="movie-box">
-      <div class="details">
-        <div class="cat"><img src = https://www.themoviedb.org/t/p/w600_and_h900_bestv2${poster_path}>
-        <div><div class="circulo"><h2>${vote_average}</h2></div>
-        <div class="title">${title}</div>
-        <div class="overview"><p class="descripcion">${overview}</p></div> 
-        <div class="overview"><b>Fecha de lanzamiento: ${release_date}<b></div>
-        </div>
-        </div>
-      </div>
-    </div>
-    <br>
-  `;
-  moviesDiv.insertAdjacentHTML("afterbegin", html);
-}
-function SubmitPopular() {
-  // Get query value
-  while (moviesDiv.firstChild){
-    moviesDiv.removeChild(moviesDiv.firstChild);
-  };
-  const query = document.getElementById("query").value;
-
-  // Execute API request
-  searchMovies(query)
-    .then((data) => {
-      // Process results from API
-      if (data && data.results) {
-        // Iterate list of movies and render each of them
-        data.results.forEach((movie) => {
-          OrdenPopular(movie.original_title, movie.overview, movie.poster_path, movie.release_date, movie.vote_average)
-        }) 
-      } 
-    })
-    .catch((err) => {
-      console.error(err)
-    })
-}
+}  
