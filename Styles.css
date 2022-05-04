@@ -1,93 +1,93 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    background-color: rgba(11, 12, 58, 0.822);
-  }
-  h1 {
-    margin-bottom: 1em;
-    color: white;
-  }
-  
-  .logo {
-    height: 150px;
-  }
-  
-  .search-bar {
-    width: 500px;
-    background-color: #ccc;
-    font-size: 20px;
-    margin-bottom: 20px;
-    margin: auto;
-    padding: 10px;
-    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
-    color: #ffffff;  
-    font-weight: 400; 
-    background: #889ccf; 
-    padding: 20px; 
-    border-radius: 35px 35px 35px 35px; 
-    -moz-border-radius: 35px 35px 35px 35px; 
-    -webkit-border-radius: 35px 35px 35px 35px; 
-    border: 2px solid #5878ca;
-  }
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: rgba(11, 12, 58, 0.822);
+}
+h1 {
+  margin-bottom: 1em;
+  color: white;
+}
 
-  .search-bar button, .search-bar input {
-    font-size: 20px;
-  }
-  
-  .movies {
-    margin: auto;
-    width: 600px;
-    margin-top: 10px;
-  }
-  
-  .movie-box {
-    background-color: rgb(215, 208, 208);
-    padding: 10px 10px 10px 10px;
-    border-radius: 10px;
-    text-align:left;
-  }
-  
-  .movie-box .details .title {
-    font-weight: bold;
-    font-size: 18px;
-  }
-  .movie-box .details .overview {
-    padding-top: 4px;
-    
-  }
-  img{
-      width: auto;
-      height: 400px; 
-      float: left;
-      margin-right: 10px;
-     }
+.logo {
+  height: 150px;
+}
 
-  .cat {
-      height:400px
-     }
+.search-bar {
+  width: 500px;
+  background-color: #ccc;
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin: auto;
+  padding: 10px;
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+  color: #ffffff;  
+  font-weight: 400; 
+  background: #889ccf; 
+  padding: 20px; 
+  border-radius: 35px 35px 35px 35px; 
+  -moz-border-radius: 35px 35px 35px 35px; 
+  -webkit-border-radius: 35px 35px 35px 35px; 
+  border: 2px solid #5878ca;
+}
+
+.search-bar button, .search-bar input {
+  font-size: 20px;
+}
+
+.movies {
+  margin: auto;
+  width: 600px;
+  margin-top: 10px;
+}
+
+.movie-box {
+  background-color: rgb(215, 208, 208);
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  text-align:left;
+}
+
+.movie-box .details .title {
+  font-weight: bold;
+  font-size: 18px;
+}
+.movie-box .details .overview {
+  padding-top: 4px;
+  
+}
+img{
+    width: auto;
+    height: 400px; 
+    float: left;
+    margin-right: 10px;
+   }
+
+.cat {
+    height:400px
+   }
 .circulo {
-	width: 1.4rem;
-	height: 1.4rem;
-	border-radius: 50%;
-	background: rgb(248, 54, 19);
-	display: flex;
-  border: solid black 2px;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-  margin:0px auto;
-  padding:3%;
-  float: right;
+width: 1.4rem;
+height: 1.4rem;
+border-radius: 50%;
+background: rgb(248, 54, 19);
+display: flex;
+border: solid black 2px;
+justify-content: center;
+align-items: center;
+text-align: center;
+margin:0px auto;
+padding:3%;
+float: right;
 }
 
 .circulo > h2 {
-	font-family: sans-serif;
-	color: white;
-	font-size: 1.4rem;
-	font-weight: bold;
+font-family: sans-serif;
+color: white;
+font-size: 1.4rem;
+font-weight: bold;
 }
 .descripcion{
-    font-size: 14px;
+  font-size: 14px;
 }
 div.Contenedor{
 float: left;
@@ -108,59 +108,66 @@ border-radius: 35px 0px 35px 0px;
 border: 2px solid #5878ca;
 }
 button.Centrado{
-    width: 110px; /* Para que no se rompa en dos líneas, y lo translade tal cual. */
-    height: 50px;
-    display: block;
-    position:relative;
-    margin: 20px auto;
-  }
+  width: 110px; /* Para que no se rompa en dos líneas, y lo translade tal cual. */
+  height: 50px;
+  display: block;
+  position:relative;
+  margin: 20px auto;
+}
 button.Centrado1{
-    width: 110px; /* Para que no se rompa en dos líneas, y lo translade tal cual. */
-    height: 50px;
-    display: block;
-    position:relative;
-    top: -40px;
-    margin: 0 auto;
-  }
-  button.Centrado2{
-    width: 110px; /* Para que no se rompa en dos líneas, y lo translade tal cual. */
-    height: 50px;
-    display: block;
-    position:relative;
-    top: -60px;
-    margin: 0 auto;
-  }
-  button.Centrado3{
-    width: 80px; /* Para que no se rompa en dos líneas, y lo translade tal cual. */
-    height: 30px;
-    position: relative;
-    padding: -27px auto 80px 100px;
-  }
-  div.Contenedor2{
-    float: right;
-    width: 200px;
-    height: 270px;
-    background-color: #ccc;
-    display: block;
-    position: absolute;
-    right: 90px; top: 190px;
-    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
-    color: #ffffff;  
-    font-weight: 400; 
-    background: #889ccf; 
-    padding: 20px; 
-    border-radius: 35px 0px 35px 0px; 
-    -moz-border-radius: 35px 0px 35px 0px; 
-    -webkit-border-radius: 35px 0px 35px 0px; 
-    border: 2px solid #5878ca;
+  width: 110px; /* Para que no se rompa en dos líneas, y lo translade tal cual. */
+  height: 50px;
+  display: block;
+  position:relative;
+  top: -40px;
+  margin: 0 auto;
+}
+button.Centrado2{
+  width: 110px; /* Para que no se rompa en dos líneas, y lo translade tal cual. */
+  height: 50px;
+  display: block;
+  position:relative;
+  top: -60px;
+  margin: 0 auto;
+}
+button.Centrado3{
+  width: 80px; /* Para que no se rompa en dos líneas, y lo translade tal cual. */
+  height: 30px;
+  position: relative;
+  padding: -27px auto 80px 100px;
+}
+div.Contenedor2{
+  float: right;
+  width: 200px;
+  height: 270px;
+  background-color: #ccc;
+  display: block;
+  position: absolute;
+  right: 90px; top: 190px;
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+  color: #ffffff;  
+  font-weight: 400; 
+  background: #889ccf; 
+  padding: 20px; 
+  border-radius: 35px 0px 35px 0px; 
+  -moz-border-radius: 35px 0px 35px 0px; 
+  -webkit-border-radius: 35px 0px 35px 0px; 
+  border: 2px solid #5878ca;
 }
 b{
-    padding-right: 170px;
+  padding-right: 170px;
 }
 .input1{
-    width: 99px;
-    height: 30px;
-    position: relative;
-    right: 10px; top: 3px;
-    margin-bottom: 10px;
+  width: 99px;
+  height: 30px;
+  position: relative;
+  right: 10px; top: 3px;
+  margin-bottom: 10px;
+}
+.input2{
+  width: 155px;
+  height: 30px;
+  position: relative;
+  right: 25px; top: 3px;
+  margin-bottom: 10px;
 }
