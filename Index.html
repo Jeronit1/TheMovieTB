@@ -7,6 +7,7 @@
 <body>
   <div>
   <h1>Buscar Peliculas</h1>
+  <!--DIV DEL MENU IZQUIERDO -->
   <div class="Contenedor">
     <p>Ver las peliculas:</p>
     <button class="Centrado" onclick="submitFormPopular()">Populares</button>
@@ -16,10 +17,12 @@
     <button class="Centrado2" onclick="submitFormComingSoon()">Proximamente</button>
     </div> 
   <div>
+    <!-- FORMULARIO PARA LOS OBJETOS DEL BUSCADOR -->
   <form class="search-bar" action="#">
     <input type="text" id="query" value="" placeholder="Ingrese el nombre" />
     <button onclick="submitForm()">Buscar</button>
 </form>
+<!--DIV DEL MENU DERECHO-->
 <div class="Contenedor2">
     <p>Filtrar por:</p>
     <b>Año:</b>
@@ -29,8 +32,7 @@
     <input class="input1" type="text" id="vote" value="" maxlength="3" placeholder="Ingrese ranking" />
     <button class="centrado3" onclick="SubmitRanking()">Filtrar</button>
     <b>Pagina:</b>
-    <input class="input1" type="text" id="page" value="" maxlength="2" placeholder="Ingrese ranking" />
-    <button id="BotonPage" class="centrado3">Filtrar</button>
+    <input class="input2" type="text" id="page" value="" maxlength="2" placeholder="Ingrese Numero Pagina" />
 </div>
 </div>
 </div>
@@ -41,4 +43,3 @@
   <script src="main.js"></script>
 </body>
 </html>
-
